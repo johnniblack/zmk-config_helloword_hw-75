@@ -12,6 +12,37 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    macros {
+		screen_left: screen-left {
+			label = "SCREEN_LEFT";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings =
+				<&macro_press   &kp LGUI>,
+				<&macro_tap     &kp LEFT>,
+				<&macro_release &kp LGUI>;
+		};
+
+		screen_right: screen-right {
+			label = "SCREEN_RIGHT";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings =
+				<&macro_press   &kp LGUI>,
+				<&macro_tap     &kp RIGHT>,
+				<&macro_release &kp LGUI>;
+		};
+	};
+
+    behaviors {
+        screen_encoder: screen_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCREEN_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&screen_left>, <&screen_right>;
+        };
+    };
+
 	keymap {
 		compatible = "zmk,keymap";
 		layer_0 {
@@ -35,7 +66,7 @@
         layer_3 {
 			label = "切换";
 			bindings = <&trans &trans>;
-			sensor-bindings = <&mw MW_UP(1) MW_DN(1)>;
+			sensor-bindings = <&screen_encoder>;
 		};
 	};
 };
