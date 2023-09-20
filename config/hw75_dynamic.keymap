@@ -21,7 +21,7 @@
 				<&macro_press   &kp LGUI>,
                 <&macro_press   &kp LCTRL>,
 				<&macro_tap     &kp LEFT>,
-                <&macro_release &kp LCTRL>;
+                <&macro_release &kp LCTRL>,
 				<&macro_release &kp LGUI>;
 		};
 
@@ -33,7 +33,7 @@
 				<&macro_press   &kp LGUI>,
                 <&macro_press   &kp LCTRL>,
 				<&macro_tap     &kp RIGHT>,
-                <&macro_release &kp LCTRL>;
+                <&macro_release &kp LCTRL>,
 				<&macro_release &kp LGUI>;
 		};
 	};
