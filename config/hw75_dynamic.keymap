@@ -100,7 +100,7 @@
 
 		layer_4 {
 			label = "窗口";
-			bindings = <&kp LALT &trans>;
+			bindings = <&trans &kp LALT>;
 			sensor-bindings = <&alt_tab_encoder>;
 		};
 	};
