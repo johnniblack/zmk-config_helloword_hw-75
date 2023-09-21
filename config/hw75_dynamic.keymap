@@ -44,6 +44,7 @@
 			bindings =
 				<&macro_press   &kp LALT>,
 				<&macro_tap     &kp TAB>,
+				<&macro_wait_time 500>,
 				<&macro_release &kp LALT>;
 		};
 
@@ -55,6 +56,7 @@
 				<&macro_press   &kp LALT>,
 				<&macro_press   &kp LSHFT>,
 				<&macro_tap     &kp TAB>,
+				<&macro_wait_time 500>,
 				<&macro_release &kp LSHFT>,
 				<&macro_release &kp LALT>;
 		};
