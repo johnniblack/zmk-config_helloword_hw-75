@@ -17,8 +17,6 @@
 			label = "SCREEN_LEFT";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
 			bindings =
 				<&macro_press   &kp LGUI>,
                 <&macro_press   &kp LCTRL>,
@@ -31,8 +29,6 @@
 			label = "SCREEN_RIGHT";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
 			bindings =
 				<&macro_press   &kp LGUI>,
                 <&macro_press   &kp LCTRL>,
@@ -45,8 +41,6 @@
 			label = "ALT_TAB_FORWARD";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
 			bindings =
 				<&macro_tap     &kp TAB>;
 		};
@@ -55,8 +49,6 @@
 			label = "ALT_TAB_BACKFORWARD";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
 			bindings =
 				<&macro_press   &kp LSHFT>,
 				<&macro_tap     &kp TAB>,
@@ -108,7 +100,7 @@
 
 		layer_4 {
 			label = "窗口";
-			bindings = <&trans &kp LALT>;
+			bindings = <&kp LALT &trans>;
 			sensor-bindings = <&alt_tab_encoder>;
 		};
 	};
