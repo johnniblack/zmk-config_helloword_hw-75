@@ -82,25 +82,18 @@
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
-		scroll {
-			label = "滚动";
-			icon = [EF 86 8A];
-			bindings = <&trans &trans>;
-			sensor-bindings = <&inc_dec_mw MW_DN(1) MW_UP(1)>;
-		};
-
-		tasks {
-			label = "窗口";
-			icon = [EF 85 9E];
-			bindings = <&trans &kp LALT>;
-			sensor-bindings = <&alt_tab_encoder>;
-		};
-
 		arrow_lef_right {
 			label = "快进";
 			icon = [EF 84 9E];
 			bindings = <&trans &trans>;
 			sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+		};
+        
+		scroll {
+			label = "滚动";
+			icon = [EF 86 8A];
+			bindings = <&trans &trans>;
+			sensor-bindings = <&inc_dec_mw MW_DN(1) MW_UP(1)>;
 		};
 
 		arrow_anti_boss {
@@ -109,6 +102,13 @@
 			bindings = <&trans &trans>;
 			sensor-bindings = <&screen_encoder>;
             profile = <&profile_spring>;
+		};
+
+        tasks {
+            label = "窗口";
+            icon = [EF 85 9E];
+            bindings = <&trans &kp LALT>;
+            sensor-bindings = <&alt_tab_encoder>;
 		};
 	};
 };
