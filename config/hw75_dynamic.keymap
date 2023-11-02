@@ -96,16 +96,16 @@
 			sensor-bindings = <&alt_tab_encoder>;
 		};
 
-		arrow_vertical {
+		arrow_lef_right {
 			label = "快进";
-			icon = [EF 86 93];
+			icon = [EF 84 9E];
 			bindings = <&trans &trans>;
 			sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
 		};
 
-		arrow_horizontal {
+		arrow_anti_boss {
 			label = "切换";
-			icon = [EF 86 9C];
+			icon = [EF 86 B1];
 			bindings = <&trans &trans>;
 			sensor-bindings = <&screen_encoder>;
             profile = <&profile_spring>;
