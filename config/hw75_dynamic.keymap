@@ -12,7 +12,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
-    macros {
+	macros {
 		screen_left: screen-left {
 			label = "SCREEN_LEFT";
 			compatible = "zmk,behavior-macro";
@@ -73,35 +73,42 @@
     };
 
 	keymap {
-		compatible = "zmk,keymap";
-		layer_0 {
+		compatible = "zmk,keymap-ext", "zmk,keymap";
+
+		volume {
 			label = "音量";
+			icon = [EF 86 AE];
 			bindings = <&lvkp LV_KEY_PREV &lvkp LV_KEY_NEXT>;
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
-		layer_1 {
+		scroll {
+			label = "滚动";
+			icon = [EF 86 8A];
+			bindings = <&trans &trans>;
+			sensor-bindings = <&inc_dec_mw MW_DN(1) MW_UP(1)>;
+		};
+
+		tasks {
+			label = "窗口";
+			icon = [EF 85 9E];
+			bindings = <&trans &kp LALT>;
+			sensor-bindings = <&alt_tab_encoder>;
+		};
+
+		arrow_vertical {
 			label = "快进";
+			icon = [EF 86 93];
 			bindings = <&trans &trans>;
 			sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
 		};
 
-		layer_2 {
-			label = "滚动";
-			bindings = <&trans &trans>;
-			sensor-bindings = <&mw MW_UP(1) MW_DN(1)>;
-		};
-
-        layer_3 {
+		arrow_horizontal {
 			label = "切换";
+			icon = [EF 86 9C];
 			bindings = <&trans &trans>;
 			sensor-bindings = <&screen_encoder>;
-		};
-
-		layer_4 {
-			label = "窗口";
-			bindings = <&trans &kp LALT>;
-			sensor-bindings = <&alt_tab_encoder>;
+            profile = <&profile_spring>;
 		};
 	};
 };
